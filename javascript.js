@@ -11,32 +11,43 @@ $(document).ready(function () {
             return false;
         }
     });
-
+   
     $(".next-step").click(function (e) {
 
+        
         var active = $('.wizard .nav-tabs li.active');
         active.next().removeClass('disabled');
         nextTab(active);
+        // $('.connecting-line').hasClass('w-66').addClass('w-100');
+        // $('.connecting-line').hasClass('w-33').addClass('w-66');
+        
+        
+        
+        
+        
 
+
+
+        
     });
-    $(".prev-step").click(function (e) {
+    // $(".prev-step").click(function (e) {
 
-        var active = $('.wizard .nav-tabs li.active');
-        prevTab(active);
-
-    });
+    //     var active = $('.wizard .nav-tabs li.active');
+    //     prevTab(active);
+        
+    // });
 });
 
 function nextTab(elem) {
     $(elem).next().find('a[data-toggle="tab"]').click();
 }
-function prevTab(elem) {
-    $(elem).prev().find('a[data-toggle="tab"]').click();
-}
+// function prevTab(elem) {
+//     $(elem).prev().find('a[data-toggle="tab"]').click();
+// }
 
 
 $('.nav-tabs').on('click', 'li', function() {
-    $('.nav-tabs li.active').removeClass('active');
+    /*$('.nav-tabs li.active').removeClass('active');*/
     $(this).addClass('active');
 });
 
